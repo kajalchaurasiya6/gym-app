@@ -1,0 +1,149 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/* Resetting Default Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+a:visited {
+    color: currentColor;
+}
+
+/* Variables */
+:root {
+    --primary-white-color: hsl(0, 0%, 95%);
+    --theme-color: #BE2020;
+}
+
+/* ----- HEADER SECTION ----- */
+header {
+    width: 100%;
+    height: 9vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 25px;
+    background-color: var(--primary-white-color);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header__logo {
+    display: flex;
+    align-items: center;
+}
+
+header .header__logo img {
+    height: 40px;
+}
+
+header .header__logo span {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+header nav {
+    width: 50%;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--primary-white-color);
+    cursor: pointer;
+    transition: filter 350ms ease-in-out;
+}
+
+header nav ul li:hover {
+    filter: brightness(0.8);
+}
+
+header nav ul li:nth-last-child(2){
+   border: 1px solid var(--theme-color);
+   transition: all 400ms ease-in-out;
+}
+header nav ul li:nth-last-child(2):hover {
+    filter: none;
+    background-color: var(--theme-color);
+    color: var(--primary-white-color);
+    transform: scale(1.1);
+
+}
+
+header nav ul li:last-child{
+    background-color: var(--theme-color);
+    color: var(--primary-white-color);
+    transition: all 400ms ease-in-out;
+}
+header nav ul li:last-child:hover {
+    filter: none;
+    background-color: var(--primary-white-color);
+    color: var(--theme-color);
+    transform: scale(1.1);
+}
+
+/* ----- HOME LANDING SECTION ----- */
+.home__landing__section {
+    width: 100%;
+    height: 100vh;
+    /* padding-top: 10vh; */
+    /* background: url(./assets/home-img.jpg) no-repeat;
+    background-size: cover; */
+    display: flex;
+    align-items: center;
+}
+
+.home__landing__section .home__left__cr {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.home__landing__section .home__left__cr #tagline {
+    color: var(--theme-color);
+}
+
+.home__landing__section .home__left__cr #title {
+    font-size: 70px;
+    margin: 18px 0;
+}
+
+.home__landing__section .home__left__cr p {
+    margin-right: 50px;
+}
+
+.home__landing__section .home__left__cr #home__cta__join_now {
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: var(--theme-color);
+    color: var(--primary-white-color);
+}
+
+.home__landing__section .home__right__cr {
+    flex: 1.5;
+    height: 100vh;
+    background: url('./assets/home-img.jpg') no-repeat;
+    background-size: cover;
+}
